@@ -721,6 +721,233 @@
       color: var(--accent);
       text-transform: uppercase;
     }
+
+    /* ── INTERVIEWS ── */
+    .interviews-section { background: var(--surface); border-top: 1px solid var(--border); }
+
+    .interview-tabs {
+      display: flex;
+      gap: .6rem;
+      margin-bottom: 2.5rem;
+      flex-wrap: wrap;
+    }
+
+    .itab {
+      font-family: 'Space Mono', monospace;
+      font-size: .7rem;
+      letter-spacing: .12em;
+      text-transform: uppercase;
+      padding: .5rem 1.1rem;
+      border-radius: 3px;
+      border: 1px solid var(--border);
+      background: var(--card);
+      color: var(--muted);
+      cursor: pointer;
+      transition: all .2s;
+    }
+
+    .itab.active, .itab:hover {
+      background: rgba(0,212,255,.1);
+      border-color: rgba(0,212,255,.45);
+      color: var(--accent);
+    }
+
+    .interview-panel { display: none; }
+    .interview-panel.active { display: block; }
+
+    .interview-header {
+      display: flex;
+      align-items: center;
+      gap: 1.2rem;
+      margin-bottom: 2rem;
+    }
+
+    .interview-avatar {
+      width: 52px; height: 52px;
+      border-radius: 50%;
+      background: rgba(0,212,255,.1);
+      border: 1.5px solid rgba(0,212,255,.35);
+      display: grid;
+      place-items: center;
+      font-size: 1.4rem;
+      flex-shrink: 0;
+    }
+
+    .interview-meta strong {
+      font-family: 'Syne', sans-serif;
+      font-weight: 700;
+      color: var(--heading);
+      font-size: 1.1rem;
+      display: block;
+    }
+
+    .interview-meta span {
+      font-family: 'Space Mono', monospace;
+      font-size: .65rem;
+      letter-spacing: .12em;
+      color: var(--accent);
+      text-transform: uppercase;
+    }
+
+    .interview-qa { display: flex; flex-direction: column; gap: 1.4rem; }
+
+    .qa-item {
+      background: var(--card);
+      border: 1px solid var(--border);
+      border-radius: 8px;
+      overflow: hidden;
+      transition: border-color .2s;
+    }
+
+    .qa-item:hover { border-color: rgba(0,212,255,.35); }
+
+    .qa-q {
+      display: flex;
+      align-items: flex-start;
+      gap: .9rem;
+      padding: 1rem 1.4rem;
+      border-bottom: 1px solid var(--border);
+    }
+
+    .qa-q-num {
+      font-family: 'Space Mono', monospace;
+      font-size: .65rem;
+      color: var(--accent);
+      background: rgba(0,212,255,.1);
+      border: 1px solid rgba(0,212,255,.25);
+      border-radius: 2px;
+      padding: .2rem .5rem;
+      flex-shrink: 0;
+      margin-top: .1rem;
+      letter-spacing: .08em;
+    }
+
+    .qa-q p { font-size: .9rem; color: var(--text); }
+
+    .qa-a {
+      padding: 1rem 1.4rem;
+      display: flex;
+      gap: .9rem;
+      align-items: flex-start;
+    }
+
+    .qa-a-icon {
+      font-size: .8rem;
+      color: var(--accent2);
+      font-family: 'Space Mono', monospace;
+      flex-shrink: 0;
+      margin-top: .15rem;
+    }
+
+    .qa-a p {
+      font-size: .95rem;
+      color: var(--heading);
+      font-style: italic;
+      line-height: 1.65;
+    }
+
+    /* ── QUELLEN ── */
+    .quellen-section { background: var(--bg); }
+
+    .quellen-grid {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 3rem;
+      margin-top: .5rem;
+    }
+
+    .quelle-group-title {
+      font-family: 'Space Mono', monospace;
+      font-size: .7rem;
+      letter-spacing: .18em;
+      text-transform: uppercase;
+      color: var(--accent);
+      margin-bottom: 1.2rem;
+      padding-bottom: .6rem;
+      border-bottom: 1px solid var(--border);
+    }
+
+    .quelle-person-list {
+      display: flex;
+      flex-direction: column;
+      gap: .7rem;
+    }
+
+    .quelle-person {
+      display: flex;
+      align-items: center;
+      gap: .9rem;
+      padding: .9rem 1.2rem;
+      background: var(--card);
+      border: 1px solid var(--border);
+      border-radius: 6px;
+      transition: border-color .2s;
+    }
+
+    .quelle-person:hover { border-color: rgba(0,212,255,.35); }
+
+    .quelle-person-icon {
+      font-size: 1.2rem;
+      flex-shrink: 0;
+    }
+
+    .quelle-person-info strong {
+      display: block;
+      font-family: 'Syne', sans-serif;
+      font-weight: 700;
+      color: var(--heading);
+      font-size: .95rem;
+    }
+
+    .quelle-person-info small {
+      font-size: .75rem;
+      color: var(--muted);
+    }
+
+    .quelle-link-list {
+      display: flex;
+      flex-direction: column;
+      gap: .6rem;
+    }
+
+    .quelle-link {
+      display: flex;
+      align-items: flex-start;
+      gap: .8rem;
+      padding: .85rem 1.2rem;
+      background: var(--card);
+      border: 1px solid var(--border);
+      border-radius: 6px;
+      text-decoration: none;
+      transition: border-color .2s, transform .2s;
+    }
+
+    .quelle-link:hover {
+      border-color: rgba(0,212,255,.4);
+      transform: translateX(5px);
+    }
+
+    .quelle-link-num {
+      font-family: 'Space Mono', monospace;
+      font-size: .6rem;
+      color: var(--muted);
+      flex-shrink: 0;
+      margin-top: .1rem;
+      min-width: 20px;
+    }
+
+    .quelle-link-text {
+      font-size: .82rem;
+      color: var(--accent);
+      word-break: break-all;
+      line-height: 1.4;
+      font-family: 'Space Mono', monospace;
+    }
+
+    @media (max-width: 768px) {
+      .quellen-grid { grid-template-columns: 1fr; }
+    }
+
   </style>
 </head>
 <body>
@@ -734,6 +961,8 @@
       <li><a href="#universitaet">Uni Rostock</a></li>
       <li><a href="#berufe">Berufe</a></li>
       <li><a href="#standorte">Standorte</a></li>
+      <li><a href="#interviews">Interviews</a></li>
+      <li><a href="#quellen">Quellen</a></li>
     </ul>
   </nav>
 
@@ -1014,6 +1243,165 @@
       </div>
     </section>
 
+
+    <!-- INTERVIEWS -->
+    <section id="interviews" class="interviews-section reveal">
+      <div class="section-label">08 — Primärquellen</div>
+      <h2>Interviews</h2>
+
+      <div class="interview-tabs">
+        <div class="itab active" onclick="showPanel('panel-heute')">🎓 Student (Heute)</div>
+        <div class="itab" onclick="showPanel('panel-frueher')">📚 Student (vor 20 Jahren)</div>
+        <div class="itab" onclick="showPanel('panel-prof')">🏛️ Professor</div>
+      </div>
+
+      <!-- Student Heute -->
+      <div class="interview-panel active" id="panel-heute">
+        <div class="interview-header">
+          <div class="interview-avatar">🎓</div>
+          <div class="interview-meta">
+            <strong>Nico</strong>
+            <span>Student · Heutzutage</span>
+          </div>
+        </div>
+        <div class="interview-qa">
+          <div class="qa-item">
+            <div class="qa-q"><span class="qa-q-num">F 01</span><p>Welche Rolle spielt IT in deinem Studium?</p></div>
+            <div class="qa-a"><span class="qa-a-icon">A →</span><p>„IT ist wichtig für Lernplattformen, Recherche, Kommunikation und Aufgaben im Studium."</p></div>
+          </div>
+          <div class="qa-item">
+            <div class="qa-q"><span class="qa-q-num">F 02</span><p>Welche Nachteile oder Risiken siehst du bei der Digitalisierung?</p></div>
+            <div class="qa-a"><span class="qa-a-icon">A →</span><p>„Datenschutzprobleme, Technikabhängigkeit und Ablenkung durch digitale Medien."</p></div>
+          </div>
+          <div class="qa-item">
+            <div class="qa-q"><span class="qa-q-num">F 03</span><p>Welchen Einfluss hat IT auf dein Studium?</p></div>
+            <div class="qa-a"><span class="qa-a-icon">A →</span><p>„IT macht das Lernen einfacher, schneller und flexibler."</p></div>
+          </div>
+          <div class="qa-item">
+            <div class="qa-q"><span class="qa-q-num">F 04</span><p>Wie oft nutzt du digitale Technologien im Alltag?</p></div>
+            <div class="qa-a"><span class="qa-a-icon">A →</span><p>„Jeden Tag."</p></div>
+          </div>
+          <div class="qa-item">
+            <div class="qa-q"><span class="qa-q-num">F 05</span><p>Denkst du, man könnte heutzutage ohne den IT-Sektor studieren?</p></div>
+            <div class="qa-a"><span class="qa-a-icon">A →</span><p>„Nein, weil viele Bereiche des Studiums heute digital sind."</p></div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Student Früher -->
+      <div class="interview-panel" id="panel-frueher">
+        <div class="interview-header">
+          <div class="interview-avatar">📚</div>
+          <div class="interview-meta">
+            <strong>Inga, Monty &amp; Nike</strong>
+            <span>Studenten · vor 20 Jahren</span>
+          </div>
+        </div>
+        <div class="interview-qa">
+          <div class="qa-item">
+            <div class="qa-q"><span class="qa-q-num">F 01</span><p>Welche Rolle spielt IT in deinem Studium?</p></div>
+            <div class="qa-a"><span class="qa-a-icon">A →</span><p>„IT nutze ich hauptsächlich für Recherche und E-Mails. Vieles läuft noch über Bücher und Papier."</p></div>
+          </div>
+          <div class="qa-item">
+            <div class="qa-q"><span class="qa-q-num">F 02</span><p>Welche Nachteile oder Risiken siehst du bei der Digitalisierung?</p></div>
+            <div class="qa-a"><span class="qa-a-icon">A →</span><p>„Man wird abhängiger von Technik und persönliche Kontakte könnten weniger werden."</p></div>
+          </div>
+          <div class="qa-item">
+            <div class="qa-q"><span class="qa-q-num">F 03</span><p>Welchen Einfluss hat IT auf dein Studium?</p></div>
+            <div class="qa-a"><span class="qa-a-icon">A →</span><p>„IT erleichtert die Informationssuche und die Organisation im Studium."</p></div>
+          </div>
+          <div class="qa-item">
+            <div class="qa-q"><span class="qa-q-num">F 04</span><p>Wie oft nutzt du digitale Technologien im Alltag?</p></div>
+            <div class="qa-a"><span class="qa-a-icon">A →</span><p>„Nicht ständig. Hauptsächlich für Computerarbeit und Internetrecherche."</p></div>
+          </div>
+          <div class="qa-item">
+            <div class="qa-q"><span class="qa-q-num">F 05</span><p>Denkst du, man könnte heutzutage ohne den IT-Sektor studieren?</p></div>
+            <div class="qa-a"><span class="qa-a-icon">A →</span><p>„Ja, größtenteils schon. Viele Dinge funktionieren noch über Bibliotheken und Präsenzveranstaltungen."</p></div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Professor -->
+      <div class="interview-panel" id="panel-prof">
+        <div class="interview-header">
+          <div class="interview-avatar">🏛️</div>
+          <div class="interview-meta">
+            <strong>Professor</strong>
+            <span>Universität Rostock</span>
+          </div>
+        </div>
+        <div class="interview-qa">
+          <div class="qa-item">
+            <div class="qa-q"><span class="qa-q-num">F 01</span><p>Welche Rolle spielt IT an der Universität?</p></div>
+            <div class="qa-a"><span class="qa-a-icon">A →</span><p>„IT ist für Lehre, Forschung und Kommunikation unverzichtbar geworden."</p></div>
+          </div>
+          <div class="qa-item">
+            <div class="qa-q"><span class="qa-q-num">F 02</span><p>Welche Nachteile oder Risiken sehen Sie bei der Digitalisierung?</p></div>
+            <div class="qa-a"><span class="qa-a-icon">A →</span><p>„Datenschutz, technische Ausfälle und die Abhängigkeit von digitalen Systemen."</p></div>
+          </div>
+          <div class="qa-item">
+            <div class="qa-q"><span class="qa-q-num">F 03</span><p>Welchen Einfluss hat IT auf die Universität?</p></div>
+            <div class="qa-a"><span class="qa-a-icon">A →</span><p>„IT erleichtert Forschung, Lehre und den Zugang zu Informationen erheblich."</p></div>
+          </div>
+          <div class="qa-item">
+            <div class="qa-q"><span class="qa-q-num">F 04</span><p>Wie oft nutzen Sie digitale Technologien im Alltag?</p></div>
+            <div class="qa-a"><span class="qa-a-icon">A →</span><p>„Täglich – für Vorlesungen, Forschung und organisatorische Aufgaben."</p></div>
+          </div>
+          <div class="qa-item">
+            <div class="qa-q"><span class="qa-q-num">F 05</span><p>Denken Sie, man könnte heutzutage ohne den IT-Sektor an einer Universität arbeiten oder studieren?</p></div>
+            <div class="qa-a"><span class="qa-a-icon">A →</span><p>„Nein, moderne Universitäten sind stark auf digitale Technologien angewiesen."</p></div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- QUELLEN -->
+    <section id="quellen" class="quellen-section reveal">
+      <div class="section-label">09 — Quellenverzeichnis</div>
+      <h2>Quellen</h2>
+      <div class="quellen-grid">
+        <div>
+          <div class="quelle-group-title">Primärquellen — Interviews</div>
+          <div class="quelle-person-list">
+            <div class="quelle-person">
+              <span class="quelle-person-icon">🎓</span>
+              <div class="quelle-person-info">
+                <strong>Nico</strong>
+                <small>Student · heutzutage</small>
+              </div>
+            </div>
+            <div class="quelle-person">
+              <span class="quelle-person-icon">📚</span>
+              <div class="quelle-person-info">
+                <strong>Inga, Monty &amp; Nike</strong>
+                <small>Studenten · vor 20 Jahren</small>
+              </div>
+            </div>
+            <div class="quelle-person">
+              <span class="quelle-person-icon">🏛️</span>
+              <div class="quelle-person-info">
+                <strong>Professor</strong>
+                <small>Universität Rostock</small>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div>
+          <div class="quelle-group-title">Sekundärquellen — Online</div>
+          <div class="quelle-link-list">
+            <a class="quelle-link" href="https://www.mystipendium.de/hochschulen/uni-rostock" target="_blank"><span class="quelle-link-num">01</span><span class="quelle-link-text">mystipendium.de/hochschulen/uni-rostock</span></a>
+            <a class="quelle-link" href="https://www.uni-rostock.de/" target="_blank"><span class="quelle-link-num">02</span><span class="quelle-link-text">uni-rostock.de</span></a>
+            <a class="quelle-link" href="https://www.bwl-lexikon.de/wiki/quartaerer-sektor/" target="_blank"><span class="quelle-link-num">03</span><span class="quelle-link-text">bwl-lexikon.de — Quartärer Sektor</span></a>
+            <a class="quelle-link" href="https://www.demokratiezentrum.org/ressourcen/lexikon/quartaerer-sektor/" target="_blank"><span class="quelle-link-num">04</span><span class="quelle-link-text">demokratiezentrum.org — Quartärer Sektor</span></a>
+            <a class="quelle-link" href="https://www.regierung-mv.de/Landesregierung/wm/Wirtschaft/" target="_blank"><span class="quelle-link-num">05</span><span class="quelle-link-text">regierung-mv.de — Wirtschaft MV</span></a>
+            <a class="quelle-link" href="https://www.destatis.de/DE/Themen/Wirtschaft/Konjunkturindikatoren/Lange-Reihen/Arbeitsmarkt/lrerw13a.html" target="_blank"><span class="quelle-link-num">06</span><span class="quelle-link-text">destatis.de — Arbeitsmarkt Lange Reihen</span></a>
+            <a class="quelle-link" href="https://de.statista.com/statistik/daten/studie/5044/umfrage/entwicklung-des-bruttoinlandsprodukts-von-mecklenburg-vorpommern-seit-1991/" target="_blank"><span class="quelle-link-num">07</span><span class="quelle-link-text">statista.com — BIP Mecklenburg-Vorpommern</span></a>
+            <a class="quelle-link" href="https://www.ausbildung.de/berufe/themen/it/" target="_blank"><span class="quelle-link-num">08</span><span class="quelle-link-text">ausbildung.de — Berufe IT</span></a>
+          </div>
+        </div>
+      </div>
+    </section>
+
   </main>
 
   <!-- FOOTER -->
@@ -1024,7 +1412,7 @@
     </div>
     <div class="footer-meta">
       <div>Abgabe: 27. Mai 2026</div>
-      <div style="margin-top:.3rem;">Universität Rostock als Fallbeispiel</div>
+      <div style="margin-top:.3rem;">Universität Rostock als Fallbeispiel · 09 Abschnitte</div>
     </div>
   </footer>
 
@@ -1040,6 +1428,14 @@
       });
     }, { threshold: 0.1 });
     reveals.forEach(r => observer.observe(r));
+
+
+    function showPanel(id) {
+      document.querySelectorAll('.interview-panel').forEach(p => p.classList.remove('active'));
+      document.querySelectorAll('.itab').forEach(t => t.classList.remove('active'));
+      document.getElementById(id).classList.add('active');
+      event.currentTarget.classList.add('active');
+    }
 
     // Animated counter
     function animateCount(el, target, suffix = '') {
